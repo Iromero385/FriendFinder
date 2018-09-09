@@ -7,9 +7,9 @@
 
 var contacts = [
     {
-        "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-        "scores":[
+        name:"Ahmed",
+        photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        scores:[
             5,
             1,
             4,
@@ -21,7 +21,40 @@ var contacts = [
             4,
             1
           ]
+      },
+    {
+        "name":"Cherlyn",
+        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "scores":[
+            5,
+            4,
+            4,
+            4,
+            5,
+            3,
+            5,
+            5,
+            4,
+            4
+          ]
+      },
+    {
+        "name":"Isaac",
+        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "scores":[
+            5,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            4,
+            4,
+            5
+          ]
       }
+    
   ];
   
   // Note how we export the array. This makes it accessible to other files using require.

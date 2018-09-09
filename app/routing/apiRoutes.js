@@ -31,10 +31,23 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.post("/api/friends", function(req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
-    // req.body is available since we're using the body-parser middleware
-    console.log("this was the api/friends post")
+    var newPerson = req.body; 
+    var compabilityScore = [];
+    for(var i = 0; i < contacts.length;i++){
+      var contactUser = contact[i].score; 
+      var newPersonSurvery = newPerson.score;
+      var finalScore = 0;  
+      for (var j = 0 ; j < contactUser.length; j++){
+        finalScore += Math.abs(contactUser[j]-newPersonSurvery[j])
+      }
+      compabilityScore.push(finalScore);
+    }
+    var bestScoreMatch = Math.min(compabilityScore);
+    var indexOfBestScore = compabilityScore.indexOf(bestScoreMatch);
+    var bestContactMatch = contact[indexOfBestScore];
+    res.json(bestContactMatch);
+
+   
   });
 
   // ---------------------------------------------------------------------------
