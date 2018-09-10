@@ -32,19 +32,21 @@ module.exports = function(app) {
 
   app.post("/api/friends", function(req, res) {
     var newPerson = req.body; 
-    var compabilityScore = [];
+    var compabilityScores = [];
     for(var i = 0; i < contacts.length;i++){
-      var contactUser = contact[i].score; 
-      var newPersonSurvery = newPerson.score;
+      var contactUser = contacts[i].scores; 
+      var newPersonSurvery = newPerson.scores;
       var finalScore = 0;  
       for (var j = 0 ; j < contactUser.length; j++){
         finalScore += Math.abs(contactUser[j]-newPersonSurvery[j])
       }
-      compabilityScore.push(finalScore);
+
+      compabilityScores.push(finalScore);
     }
-    var bestScoreMatch = Math.min(compabilityScore);
-    var indexOfBestScore = compabilityScore.indexOf(bestScoreMatch);
-    var bestContactMatch = contact[indexOfBestScore];
+    var bestScoreMatch = Math.min(...compabilityScores);
+    var indexOfBestScore = compabilityScores.indexOf(bestScoreMatch);
+    var bestContactMatch = contacts[indexOfBestScore];
+    // contacts.push(newPerson)
     res.json(bestContactMatch);
 
    

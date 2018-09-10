@@ -8,7 +8,7 @@
 var contacts = [
     {
         name:"Ahmed",
-        photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        photo:"http://www.gstatic.com/tv/thumb/persons/314/314_v9_bc.jpg",
         scores:[
             5,
             1,
@@ -23,8 +23,8 @@ var contacts = [
           ]
       },
     {
-        "name":"Cherlyn",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"Brad",
+        "photo":"https://images.complex.com/complex/images/c_limit,w_680/fl_lossy,pg_1,q_auto/x5s3si7tzsgvheir8rke/brad-pitt-home-lawsuit",
         "scores":[
             5,
             4,
